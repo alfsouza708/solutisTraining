@@ -1,6 +1,12 @@
 <p>
-  cursos component!
+  Melhor site {{ nomePortal }}
 </p>
 
 <app-cursos-detalhe></app-cursos-detalhe> <!-- caso seja colocado em app.component.html dá erro,
  a não ser que exporte assim como CursosComponent -->
+
+<ul>
+  <li *ngFor="let jogo of jogos"> <!--Mais detalhes nas aulas de diretivas-->
+    {{ jogo }}
+  </li>
+</ul>
