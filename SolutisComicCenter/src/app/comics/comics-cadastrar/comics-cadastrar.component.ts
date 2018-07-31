@@ -1,3 +1,4 @@
+import { ComicsCadastrarService } from './comics-cadastrar.service';
 import { Comic } from './../../model/comic.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,13 +13,22 @@ export class ComicsCadastrarComponent implements OnInit {
   comicArray: Comic[];
   
 
-  constructor() { }
+  constructor(private comicService: ComicsCadastrarService ) { }
 
   ngOnInit() {
   }
 
   cadastrarComic() {
     
+  }
+
+  pesquisarComic(name: String) {
+    if(name == null) {
+      return this.comicService.getAllComic;
+    }
+    else {
+      return this.comicService.getComicByName(name);
+    }
   }
 
 }
