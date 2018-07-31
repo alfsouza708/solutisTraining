@@ -1,6 +1,7 @@
 import { ComicsCadastrarService } from './comics-cadastrar.service';
 import { Comic } from './../../model/comic.model';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-comics-cadastrar',
@@ -11,6 +12,7 @@ export class ComicsCadastrarComponent implements OnInit {
 
   comic: Comic;//new
   comicArray: Comic[];
+  formulario: FormGroup;
   
 
   constructor(private comicService: ComicsCadastrarService ) { }
