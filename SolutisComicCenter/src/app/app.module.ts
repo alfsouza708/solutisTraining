@@ -1,7 +1,6 @@
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ToastyModule } from 'ng2-toasty';
 
 import { AppComponent } from './app.component';
 import { ComicsCadastrarComponent } from './comics/comics-cadastrar/comics-cadastrar.component';
@@ -18,8 +17,7 @@ export const routes = [{ path: '',  loadChildren: './home-dashboard/home-dashboa
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule,
-    ToastyModule.forRoot()
+    HttpClientModule
   ],
   providers: [ComicsCadastrarService, HttpClientModule],
   bootstrap: [AppComponent]
