@@ -59,3 +59,11 @@
 .logo-comic {
 	width:70px;
 }
+
+.cadastro-form{
+	width: 100vw;
+    height: 100vh;
+	background-image: url("../../../assets/img/background-cadastro.jpg");
+	background-position: center;
+	background-size: 100% 100%;
+}
