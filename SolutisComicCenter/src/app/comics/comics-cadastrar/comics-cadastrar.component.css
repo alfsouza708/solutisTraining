@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
 .head {
-	display: table;
-	width: 100%;
-    background: rgba(0,0,0,.9);
+    display: table;
+    width: 100%;
+    background: rgba(0, 0, 0, .9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
+
 .logo {
-	display: table-cell;
-	width: 1%;
-	padding: 20px;
-	vertical-align: middle;
+    display: table-cell;
+    width: 1%;
+    padding: 20px;
+    vertical-align: middle;
 }
+
 .logo-inner {
-	width: 50px;
-	height: 50px;
-	/* background: rgb(255, 255, 255); */
+    width: 50px;
+    height: 50px;
+    /* background: rgb(255, 255, 255); */
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
@@ -24,46 +26,60 @@
     font-family: Georgia, serif;
     font-style: italic;
 }
+
 .menu {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
 }
+
 .menu-inner {
-	padding: 0;
-	margin: 0 20px;
-	list-style: none;
-	font-size: 0;
+    padding: 0;
+    margin: 0 20px;
+    list-style: none;
+    font-size: 0;
     border-radius: 5px;
     overflow: hidden;
-    display:inline-block;
+    display: inline-block;
     vertical-align: middle;
 }
+
 .menu-item {
-	display: inline-block;
-	font-size: 0.9rem;
-  	font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .menu-link {
-	display: block;
-	padding: 15px 25px;
-	/* background: rgb(255, 255, 255); */
+    display: block;
+    padding: 15px 25px;
+    /* background: rgb(255, 255, 255); */
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
+
 .menu-link:hover {
     color: #e4d218;
 }
 
 .logo-comic {
-	width:70px;
+    width: 70px;
 }
 
-.cadastro-form{
-	width: 100vw;
+.cadastro-form {
     height: 100vh;
-	background-image: url("../../../assets/img/background-cadastro.jpg");
-	background-position: center;
-	background-size: 100% 100%;
+    background-image: url("../../../assets/img/background-cadastro.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.cadastro-container {
+    position: relative;
+    top: 8%;
+}
+
+.cadastro-text {
+    font-family: 'Do Hyeon', sans-serif;
+    margin-bottom: 2rem;
+    font-size: 40px;
 }
