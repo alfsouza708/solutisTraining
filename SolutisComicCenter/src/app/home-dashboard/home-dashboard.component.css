@@ -44,9 +44,7 @@
   font-size: 0.9rem;
   font-family: 'Montserrat', sans-serif;
 }
-.menu-item + .menu-item {
-    /* border-left: 1px solid #bbb; */
-}
+
 .menu-link {
 	display: block;
 	padding: 15px 25px;
