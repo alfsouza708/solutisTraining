@@ -1,3 +1,61 @@
-<p>
-  comics-cadastrar works!
-</p>
+<!--EDIÇÃO E NUMERO DE PAGINAS ESTÃO COMO TIPO TEXTO-->
+<form class="form-horizontal" [formGroup]="formulario">
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="nome" class="control-label">Nome</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="nome" 
+        id="nome" placeholder="Nome">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="edicao" class="control-label">Edição</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="edicao"
+        id="edicao" placeholder="Nº da Edição" >  
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+      <div class="col-sm-12">
+        <label for="paginas" class="control-label">Páginas</label>
+      </div>
+  
+      <div class="col-sm-12">
+        <input type="text" class="form-control" formControlName="paginas" 
+          id="paginas" placeholder="Nº de Páginas">
+      </div>
+  
+    </div>
+
+   <div class="form-group">
+
+       <div class="col-sm-12">
+         <label for="dataPublicacao" class="control-label">Data de Publicação</label>
+       </div>
+    
+       <div class="col-sm-12">
+         <input type="text" class="form-control" formControlName="dataPublicacao" 
+           id="dataPublicacao" placeholder="DD/MM/YYYY">
+       </div>
+    
+     </div>
+    
+  
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <app-form-debug [form]="formulario"></app-form-debug>
+
+</form>

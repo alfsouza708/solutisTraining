@@ -1,7 +1,7 @@
 import { ComicsCadastrarService } from './comics-cadastrar.service';
 import { Comic } from './../../model/comic.model';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-comics-cadastrar',
@@ -17,7 +17,16 @@ export class ComicsCadastrarComponent implements OnInit {
 
   constructor(private comicService: ComicsCadastrarService ) { }
 
+  //utilizacao de formulario ao inves do model (quebra de padrao de projeto)
   ngOnInit() {
+
+    this.formulario = new FormGroup({ 
+      nome: new FormControl(null),
+      edicao: new FormControl(null),
+      paginas: new FormControl(null),
+      dataPublicacao: new FormControl(null)
+     })
+
   }
 
   cadastrarComic() {
