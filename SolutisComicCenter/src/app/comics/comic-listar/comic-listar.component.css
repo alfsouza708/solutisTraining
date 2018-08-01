@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-
 .head {
-	display: table;
-	width: 100%;
-  background: rgba(0,0,0,.9);
+    display: table;
+    width: 100%;
+    background: rgba(0, 0, 0, .9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
-.logo {
-	display: table-cell;
-	width: 1%;
-	padding: 20px;
-	vertical-align: middle;
-}
-.logo-inner {
-	width: 50px;
-	height: 50px;
 
+.logo {
+    display: table-cell;
+    width: 1%;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.logo-inner {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
@@ -24,38 +24,54 @@
     font-family: Georgia, serif;
     font-style: italic;
 }
+
 .menu {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
 }
+
 .menu-inner {
-	padding: 0;
-	margin: 0 20px;
-	list-style: none;
-	font-size: 0;
+    padding: 0;
+    margin: 0 20px;
+    list-style: none;
+    font-size: 0;
     border-radius: 5px;
     overflow: hidden;
-    display:inline-block;
+    display: inline-block;
     vertical-align: middle;
 }
+
 .menu-item {
-	display: inline-block;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .menu-link {
-	display: block;
-	padding: 15px 25px;
-  color: rgb(255, 255, 255);
+    display: block;
+    padding: 15px 25px;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
+
 .menu-link:hover {
     /* background: #444; */
     color: #e4d218;
 }
 
 .logo-comic {
-	width:70px;
+    width: 70px;
+}
+
+.listar-container {
+    height: 100vh;
+    background-image: url("../../../assets/img/background-listar.jpg");
+    background-position: center;
+    background-repeat: true;
+    opacity: 1;
+}
+
+.listar-search {
+    margin-top: 10%;
 }

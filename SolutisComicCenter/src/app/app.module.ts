@@ -10,6 +10,7 @@ import { ComicsCadastrarService } from './comics/comics-cadastrar/comics-cadastr
 import { ReactiveFormsModule } from '@angular/forms';
 import { ComicsCadastrarComponent } from './comics/comics-cadastrar/comics-cadastrar.component';
 import { ComicListarComponent } from './comics/comic-listar/comic-listar.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 export const routes = [{ path: 'listar', component: ComicListarComponent }, { path: 'cadastrar', component: ComicsCadastrarComponent }, { path: '',  loadChildren: './home-dashboard/home-dashboard.module#HomeDashboardModule' }];
 //note to self: lembrar de colocar ComicsCadastrarComponent no seu devido module quando for dar routing
@@ -24,7 +25,8 @@ export const routes = [{ path: 'listar', component: ComicListarComponent }, { pa
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
-    ComicsCadastrarModule
+    ComicsCadastrarModule,
+    AngularFontAwesomeModule
   ],
   providers: [ComicsCadastrarService, HttpClientModule, ComicListarComponent],
   bootstrap: [AppComponent]
