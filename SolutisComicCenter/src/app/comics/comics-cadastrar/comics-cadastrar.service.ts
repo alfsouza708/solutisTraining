@@ -10,7 +10,7 @@ export class ComicsCadastrarService {
 
   private comicUrl: string = 'http://localhost:8080/comics';
   private headers = new Headers({'Content-Type' : 'application.json'});
-  private arrayComic: Comic[];
+  private arrayComic: any[] = [];
 
   constructor( private http: HttpClient) {}
   
@@ -40,7 +40,7 @@ export class ComicsCadastrarService {
     return newArrayComic;
   }
  
- saveComic(comic: Comic){
+ saveComic(comic: any){
    this.arrayComic.push(comic);
  }
 

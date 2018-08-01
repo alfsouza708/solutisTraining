@@ -1,8 +1,10 @@
 import { ComicsCadastrarService } from './comics-cadastrar.service';
-//import { Comic } from './../../model/comic.model';
+import { Comic } from './../../model/comic.model';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
+
+const comicArray: any[] = [];
 
 @Component({
   selector: 'app-comics-cadastrar',
@@ -11,8 +13,8 @@ import { Http } from '@angular/http';
 })
 export class ComicsCadastrarComponent implements OnInit {
 
-  //comic: Comic;//new
-  //comicArray: Comic[];
+  comic: Comic;//new
+  
   formulario: FormGroup;
   
 
@@ -20,6 +22,8 @@ export class ComicsCadastrarComponent implements OnInit {
 
   //utilizacao de formulario ao inves do model (quebra de padrao de projeto)
   ngOnInit() {
+
+    
 
      this.formulario = this.formBuilder.group({
        nome:[null, Validators.required],
@@ -35,6 +39,8 @@ export class ComicsCadastrarComponent implements OnInit {
 
     this.http.post('https://httpbin.org/post', JSON.stringify(this.formulario.value))
       .subscribe(dados => {
+        comicArray.push(dados.json);
+        localStorage.setItem('array', 'comicArray');
         console.log(dados);
         this.Resetar();
       }, (error:any) => alert('erro'));
@@ -62,6 +68,10 @@ export class ComicsCadastrarComponent implements OnInit {
       'has-error': this.verificaValidTouched(campo),
       'has-feedback': this.verificaValidTouched(campo)
     };
+  }
+
+  mostrar(){ 
+    console.log(comicArray);
   }
 
   /*cadastrarComic() {
