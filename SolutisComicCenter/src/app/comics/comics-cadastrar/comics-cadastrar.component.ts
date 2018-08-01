@@ -67,7 +67,7 @@ export class ComicsCadastrarComponent implements OnInit {
   /*cadastrarComic() {
     
   }*/
-//try exception usando toasty para mostrar msg de erro !!implementar
+
   /*pesquisarComic(name: String) {
     if(name == null) {
       return this.comicService.getAllComic;

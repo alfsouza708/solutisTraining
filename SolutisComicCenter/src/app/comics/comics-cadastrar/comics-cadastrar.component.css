@@ -1,3 +1,60 @@
 .ng-invalid.ng-touched:not(form) {
     border: 1px solid red;
 }
+
+.head {
+	display: table;
+	width: 100%;
+    background: rgb(27, 78, 219);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.logo {
+	display: table-cell;
+	width: 1%;
+	padding: 20px;
+	vertical-align: middle;
+}
+.logo-inner {
+	width: 50px;
+	height: 50px;
+	background: rgb(3, 16, 61);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    cursor: default;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+.menu {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
+}
+.menu-inner {
+	padding: 0;
+	margin: 0 20px;
+	list-style: none;
+	font-size: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    display:inline-block;
+    vertical-align: middle;
+}
+.menu-item {
+	display: inline-block;
+	font-size: 1rem;
+}
+.menu-item + .menu-item {
+    border-left: 1px solid #bbb;
+}
+.menu-link {
+	display: block;
+	padding: 20px 30px;
+	background: rgb(3, 16, 61);;
+    color: white;
+    text-decoration: none;
+}
+.menu-link:hover {
+    background: #444;
+}
