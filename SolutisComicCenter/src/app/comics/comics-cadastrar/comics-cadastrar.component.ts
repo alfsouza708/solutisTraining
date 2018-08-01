@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
 
-const comicArray: any[] = [];
+
 
 @Component({
   selector: 'app-comics-cadastrar',
@@ -17,6 +17,7 @@ export class ComicsCadastrarComponent implements OnInit {
   
   formulario: FormGroup;
   
+  comicArray: any[] = [];
 
   constructor(private formBuilder: FormBuilder,private comicService: ComicsCadastrarService, private http: Http  ) { }
 
@@ -35,13 +36,13 @@ export class ComicsCadastrarComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formulario.value);
+    //console.log(this.formulario.value);
 
-    this.http.post('https://httpbin.org/post', JSON.stringify(this.formulario.value))
+    this.http.post('https://httpbin.org/post', JSON)
       .subscribe(dados => {
-        comicArray.push(dados.json);
+        this.comicArray.push(dados.text);
         localStorage.setItem('array', 'comicArray');
-        console.log(dados);
+        //console.log(dados);
         this.Resetar();
       }, (error:any) => alert('erro'));
   }
@@ -71,7 +72,7 @@ export class ComicsCadastrarComponent implements OnInit {
   }
 
   mostrar(){ 
-    console.log(comicArray);
+    console.log(this.comicArray);
   }
 
   /*cadastrarComic() {
