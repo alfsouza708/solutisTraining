@@ -1,6 +1,7 @@
 <!--EDIÇÃO E NUMERO DE PAGINAS ESTÃO COMO TIPO TEXTO-->
-<form class="form-horizontal" [formGroup]="formulario">
-  <div class="form-group">
+<form class="form-horizontal" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+  <div class="form-group" [ngClass]="aplicaCssErro('nome')">
 
     <div class="col-sm-12">
       <label for="nome" class="control-label">Nome</label>
@@ -9,50 +10,36 @@
     <div class="col-sm-12">
       <input type="text" class="form-control" formControlName="nome" 
         id="nome" placeholder="Nome">
+        <app-campo-control-erro 
+          [mostrarErro]="verificaValidTouched('nome')" 
+          msgErro="Nome é obrigatório.">
+        </app-campo-control-erro>
     </div>
+
+    
 
   </div>
 
-  <div class="form-group">
+  <div class="form-group" [ngClass]="aplicaCssErro('email')">
 
     <div class="col-sm-12">
-      <label for="edicao" class="control-label">Edição</label>
+      <label for="email" class="control-label">E-mail</label>
     </div>
 
     <div class="col-sm-12">
-      <input type="text" class="form-control" formControlName="edicao"
-        id="edicao" placeholder="Nº da Edição" >  
+      <input type="email" class="form-control" formControlName="email"
+        id="email" placeholder="nome@email.com" >
+        <app-campo-control-erro 
+          [mostrarErro]="verificaValidTouched('email')" 
+          msgErro="Email é obrigatório.">
+        </app-campo-control-erro>  
+        <app-campo-control-erro 
+          [mostrarErro]="verificaEmailInvalido()" 
+          msgErro="Email é invalido.">
+        </app-campo-control-erro> 
     </div>
 
-  </div>
-
-  <div class="form-group">
-
-      <div class="col-sm-12">
-        <label for="paginas" class="control-label">Páginas</label>
-      </div>
-  
-      <div class="col-sm-12">
-        <input type="text" class="form-control" formControlName="paginas" 
-          id="paginas" placeholder="Nº de Páginas">
-      </div>
-  
-    </div>
-
-   <div class="form-group">
-
-       <div class="col-sm-12">
-         <label for="dataPublicacao" class="control-label">Data de Publicação</label>
-       </div>
-    
-       <div class="col-sm-12">
-         <input type="text" class="form-control" formControlName="dataPublicacao" 
-           id="dataPublicacao" placeholder="DD/MM/YYYY">
-       </div>
-    
-     </div>
-    
-  
+  </div>  
 
   <button type="submit" class="btn btn-primary">Submit</button>
 
