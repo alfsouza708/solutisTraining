@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .head {
 	display: table;
 	width: 100%;
@@ -39,20 +41,19 @@
 }
 .menu-item {
 	display: inline-block;
-	font-size: 1rem;
+	font-size: 0.9rem;
+  	font-family: 'Montserrat', sans-serif;
 }
-.menu-item + .menu-item {
-    border-left: 1px solid #bbb;
-}
+
 .menu-link {
 	display: block;
-	padding: 20px 30px;
-	background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+	padding: 15px 25px;
+	/* background: rgb(255, 255, 255); */
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 .menu-link:hover {
-    background: #444;
+    color: #e4d218;
 }
 
 .logo-comic {

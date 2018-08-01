@@ -24,8 +24,6 @@ export class ComicsCadastrarComponent implements OnInit {
   //utilizacao de formulario ao inves do model (quebra de padrao de projeto)
   ngOnInit() {
 
-    
-
      this.formulario = this.formBuilder.group({
        nome:[null, Validators.required],
        email:[null, [Validators.required, Validators.email]]
